@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+  --soft-blue:hsl(215, 51%, 70%);
+  --cyan:hsl(178, 100%, 50%);
+  --very-dark-blue-main:hsl(217, 54%, 11%);
+  --very-dark-blue-card:hsl(216, 50%, 16%);
+  --very-dark-blue--line:hsl(215, 32%, 27%);
+  --white:hsl(0, 0%, 100%);
+}
+
+body{
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--very-dark-blue-main);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height:100vh;
+}
+main{
+  text-align: center;
+  background-color: var(--very-dark-blue-card);
+  width: 200px;
+  height:auto;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px black;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.hover-image{
+  width:100%;
+  height: 180px;
+  background-image: url("./images/image-equilibrium.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+a{
+  color: var(--soft-blue);
+  text-decoration: none;
+
+}
+a:visited{
+  color:var(--cyan);
+}
+.view-icon{
+  visibility: hidden;
+  z-index: 999;
+}
+.hover-image:hover .view-icon,.hover-image:hover .capa-azul{
+  visibility: visible;
+}
+.hover-image:hover{
+  background-color: var(--white);
+}
+.capa-azul{
+  background-color: var(--cyan);
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  filter: opacity(.5);
+  visibility: hidden;
+}
+
+
+h1{
+  font-size: 14px;
+  color:var(--white);
+  text-align: left;
+}
+p{
+  color:var(--soft-blue);
+  text-align: left;
+}
+.price-and-date{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--soft-blue);
+  padding-bottom: 20px;
+}
+.price{
+  color: var(--cyan);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+}
+.date{
+  color: var(--soft-blue);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+p,.price,.date{
+  font-size: 10px;
+}
+.bottom-part{
+  display: flex;
+  align-items: center;
+  gap:5px;
+}
+.avatar-image{
+  border: 0.5px solid var(--white);
+  border-radius: 50%;
+}
